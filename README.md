@@ -1,2 +1,1 @@
-# IPM-LSTM
-IPM-LSTM: A Learning-Based Interior Point Method for Solving Nonlinear Programs
+# IPM-LSTM: A Learning-Based Interior Point Method for Solving Nonlinear Programs
