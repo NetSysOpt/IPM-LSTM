@@ -30,4 +30,17 @@ cyipopt=1.3.0
 ```
 ## Running experiments
 
-**Generate Dataset**
+You can use the following command to generate a Convex Quadratic Programming (QP) dataset (RHS):
+```markdown
+python generate_data.py --config ./configs/Generate_Data.yaml --prob_type Convex_QP_RHS
+```
+For training phase, you can running following command:
+```markdown
+python main.py --config .\configs\QP.yaml --prob_type QP_RHS
+```
+Our model will be stored at `./results/lstm/params/QP_RHS_100_50_50_100_50.pth`. During the testing phase, you can run the following command to obtain our experimental results:
+```markdown
+python main.py --config ./configs/QP.yaml --prob_type QP_RHS --solver ipopt --save_sol
+```
+
+## Citing our work
