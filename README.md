@@ -36,11 +36,14 @@ python generate_data.py --config ./configs/Generate_Data.yaml --prob_type Convex
 ```
 For training phase, you can running following command:
 ```markdown
-python main.py --config .\configs\QP.yaml --prob_type QP_RHS
+python main.py --config ./configs/QP.yaml --prob_type QP_RHS
 ```
 Our model will be stored at `./results/lstm/params/QP_RHS_100_50_50_100_50.pth`. During the testing phase, you can run the following command to obtain our experimental results:
 ```markdown
 python main.py --config ./configs/QP.yaml --prob_type QP_RHS --solver ipopt --save_sol
 ```
-
+You can use the following command to plot the figures in our paper.
+```markdown
+python plot.py --config ./configs/QP.yaml --prob_type QP_RHS --plot_type Objective_values
+```
 ## Citing our work
