@@ -1,0 +1,9 @@
+---
+
+
+mat_name: "qp1"
+num_var: 100
+num_eq: 50
+num_ineq: 50
+data_size: 10000
+prob_type: "Convex_QP_RHS"

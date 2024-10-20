@@ -1,0 +1,15 @@
+---
+
+plot_type: "Objective_values"
+model_name: "LSTM"
+mat_name: "qp1"
+num_var: 100
+num_eq: 50
+num_ineq: 50
+data_size: 10000
+prob_type: "Convex_QP_RHS"
+inner_T: 50
+outer_T: 100
+save_dir: "./results/"
+eta: 0.9
+sigma: 0.9

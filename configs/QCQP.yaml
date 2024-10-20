@@ -1,0 +1,31 @@
+---
+
+
+num_var: 100
+num_eq: 50
+num_ineq: 50
+prob_type: "Convex_QCQP_RHS"
+
+eq_tol: 0.01
+ineq_tol: 0.002
+input_dim: 2
+hidden_dim: 50
+model_name: "LSTM"
+precondi: True
+sigma: 0.9
+tau: 0.999
+use_line_search: False
+
+batch_size: 128
+device: 'cuda:0'
+lr: 0.0001
+num_epoch: 50
+inner_T: 50
+outer_T: 100
+patience: 50
+save_dir: './results/'
+seed: 17
+test: False
+test_solver: 'ipopt'
+data_size: 10000
+weight_decay: 0.0
