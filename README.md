@@ -47,3 +47,14 @@ You can use the following command to plot the figures in our paper.
 python plot.py --config ./configs/QP.yaml --prob_type QP_RHS --plot_type Objective_values
 ```
 ## Citing our work
+If you would like to utilize IPM-LSTM in your research, we kindly request that you cite our paper as follows:
+
+```text
+@misc{gao2024ipm,
+      title={IPM-LSTM: A Learning-Based Interior Point Method for Solving Nonlinear Programs}, 
+      author={Gao, Xi and Xiong, Jinxin and Wang, Akang and Duan, Qihong and Xue, Jiang and Shi, Qingjiang},
+      year={2024},
+      journal={NeurIPS},
+      url={https://arxiv.org/abs/2410.15731}
+}
+```
