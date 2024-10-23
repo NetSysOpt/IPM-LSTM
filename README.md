@@ -15,7 +15,7 @@ where the functions $f:\mathbb{R}^n\rightarrow \mathbb{R}$ and $h:\mathbb{R}^n\r
 
 $$
 \begin{aligned}
-        & \min_{\theta}\frac{1}{|\mathcal{M}|} \sum_{M \in \mathcal{M}} \left( \frac{1}{K}  \sum_{k=1}^{K}\frac{1}{T}\sum_{t=1}^{T} \frac{1}{2}\left\||J^k y^k_t(\theta) + F^k\right\||^{2} \right)_M,
+        & \min_{\theta}\frac{1}{|\mathcal{M}|} \sum_{M \in \mathcal{M}} \left( \frac{1}{K}  \sum_{k=1}^{K}\frac{1}{T}\sum_{t=1}^{T} \frac{1}{2}\left\|\|J^k y^k_t(\theta) + F^k\right\|\|^{2} \right)_M,
 \end{aligned}
 $$
 
@@ -34,7 +34,7 @@ You can use the following command to generate a Convex Quadratic Programming (QP
 ```markdown
 python generate_data.py --config ./configs/Generate_Data.yaml --prob_type Convex_QP_RHS
 ```
-For training phase, you can running following command:
+For training phase, you can run following command:
 ```markdown
 python main.py --config ./configs/QP.yaml --prob_type QP_RHS
 ```
