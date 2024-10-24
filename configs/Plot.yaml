@@ -1,7 +1,7 @@
 ---
 
 plot_type: "Objective_values"
-model_name: "LSTM"
+model_name: "lstm"
 mat_name: "qp1"
 num_var: 100
 num_eq: 50
