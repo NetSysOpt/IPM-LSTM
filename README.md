@@ -40,7 +40,7 @@ python main.py --config ./configs/QP.yaml --prob_type QP_RHS
 ```
 Our model will be stored at `./results/lstm/params/QP_RHS_100_50_50_100_50.pth`. During the testing phase, you can run the following command to obtain our experimental results:
 ```markdown
-python main.py --config ./configs/QP.yaml --prob_type QP_RHS --solver ipopt --save_sol
+python main.py --config ./configs/QP.yaml --prob_type QP_RHS --test --solver ipopt --save_sol
 ```
 You can use the following command to plot the figures in our paper.
 ```markdown
