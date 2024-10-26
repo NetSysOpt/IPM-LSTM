@@ -138,6 +138,7 @@ elif args.prob_type == 'Nonconvex_QP':
     if (args.mat_name == 'qp1') or (args.mat_name == 'qp2'):
         load_path = os.path.join('datasets', 'qp', 'nonconvex_qp', '{}.mat'.format(args.mat_name))
         data = sio.loadmat(load_path)
+        np.random.seed(17)
         Q = []
         p = []
         G = []
@@ -188,6 +189,7 @@ elif args.prob_type == 'Nonconvex_QP':
     elif (args.mat_name == 'st_rv1') or (args.mat_name == 'st_rv2') or (args.mat_name == 'st_rv3') or (args.mat_name == 'st_rv7') or (args.mat_name == 'st_rv9'):
         load_path = os.path.join('datasets', 'qp', 'nonconvex_qp', '{}.mat'.format(args.mat_name))
         data = sio.loadmat(load_path)
+        np.random.seed(17)
         Q = []
         p = []
         G = []
@@ -236,7 +238,7 @@ elif args.prob_type == 'Nonconvex_QP':
     elif args.mat_name == 'qp30_15_1_1':
         load_path = os.path.join('datasets/qp/nonconvex_qp', '{}.mat'.format(args.mat_name))
         data = sio.loadmat(load_path)
-
+        np.random.seed(17)
         Q = []
         p = []
         G = []
