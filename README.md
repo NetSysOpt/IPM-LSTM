@@ -50,11 +50,12 @@ python plot.py --config ./configs/QP.yaml --prob_type QP_RHS --plot_type Objecti
 If you would like to utilize IPM-LSTM in your research, we kindly request that you cite our paper as follows:
 
 ```text
-@misc{gao2024ipm,
-      title={IPM-LSTM: A Learning-Based Interior Point Method for Solving Nonlinear Programs}, 
-      author={Gao, Xi and Xiong, Jinxin and Wang, Akang and Duan, Qihong and Xue, Jiang and Shi, Qingjiang},
-      year={2024},
-      journal={NeurIPS},
-      url={https://arxiv.org/abs/2410.15731}
+@article{gao2024ipm,
+  title={IPM-LSTM: A Learning-Based Interior Point Method for Solving Nonlinear Programs},
+  author={Gao, Xi and Xiong, Jinxin and Wang, Akang and Xue, Jiang and Shi, Qingjiang and others},
+  journal={Advances in Neural Information Processing Systems},
+  volume={37},
+  pages={122891--122916},
+  year={2024}
 }
 ```
