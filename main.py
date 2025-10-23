@@ -670,7 +670,7 @@ elif args.test:
             else:
                 init_zu = None
 
-            sols, _, para_times, iters = test_data.opt_solve(solver_type='ipopt', initial_y=test_x)
+            sols, _, para_times, iters = test_data.opt_solve(solver_type='ipopt')
             best_obj = test_data.obj_fn(torch.tensor(sols, device=args.device).unsqueeze(-1).float()).mean()
             print('Best objective value:', best_obj)
             print('Original Solver Time: {}'.format(para_times))
@@ -719,4 +719,5 @@ elif args.test:
                          'F0': np.array(test_F0)}
 
             #save test results
+
             sio.savemat(results_save_path, test_dict)
