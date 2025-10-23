@@ -66,11 +66,11 @@ if args.prob_type == 'Convex_QP_RHS':
 
         sio.savemat(file_path,
                 {'Q': Q,
-                     'p': p,
-                     'A': A,
-                     'X': X,
-                     'G': G,
-                     'h': h})
+                 'p': p,
+                 'A': A,
+                 'X': X,
+                 'G': G,
+                 'h': h})
 
 elif args.prob_type == 'Nonconvex_Program_RHS':
     """
@@ -304,6 +304,7 @@ elif args.prob_type == 'Nonconvex_QP':
                      'lb': np.array(lb)}
         file_path = os.path.join('datasets', 'qp', "{}.mat".format(args.mat_name))
         sio.savemat(file_path, rand_dict)
+
 
 
 
