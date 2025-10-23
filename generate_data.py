@@ -42,12 +42,12 @@ if args.prob_type == 'Convex_QP_RHS':
         h = np.sum(np.abs(G @ np.linalg.pinv(A)), axis=1)
 
         sio.savemat(file_path,
-            {'Q': np.repeat(np.expand_dims(Q, axis=0), args.data_size, axis=0),
-             'p': np.repeat(np.expand_dims(p, axis=0), args.data_size, axis=0),
-             'A': np.repeat(np.expand_dims(A, axis=0), args.data_size, axis=0),
-             'X': np.expand_dims(X, axis=-1),
-             'G': np.repeat(np.expand_dims(G, axis=0), args.data_size, axis=0),
-             'h': np.expand_dims(h, axis=-1)})
+            {'Q': Q,
+             'p': p,
+             'A': A,
+             'X': X,
+             'G': G,
+             'h': h})
 
 
     num_eq = args.num_eq
@@ -65,12 +65,12 @@ if args.prob_type == 'Convex_QP_RHS':
         h = np.sum(np.abs(G @ np.linalg.pinv(A)), axis=1)
 
         sio.savemat(file_path,
-                {'Q': np.repeat(np.expand_dims(Q, axis=0), args.data_size, axis=0),
-                     'p': np.repeat(np.expand_dims(p, axis=0), args.data_size, axis=0),
-                     'A': np.repeat(np.expand_dims(A, axis=0), args.data_size, axis=0),
-                     'X': np.expand_dims(X, axis=-1),
-                     'G': np.repeat(np.expand_dims(G, axis=0), args.data_size, axis=0),
-                     'h': np.expand_dims(h, axis=-1)})
+                {'Q': Q,
+                     'p': p,
+                     'A': A,
+                     'X': X,
+                     'G': G,
+                     'h': h})
 
 elif args.prob_type == 'Nonconvex_Program_RHS':
     """
@@ -96,12 +96,12 @@ elif args.prob_type == 'Nonconvex_Program_RHS':
     file_path = os.path.join('datasets', 'nonconvex_program', "{}.mat".format(mat_name))
 
     sio.savemat(file_path,
-                {'Q': np.repeat(np.expand_dims(Q, axis=0), args.data_size, axis=0),
-                 'p': np.repeat(np.expand_dims(p, axis=0), args.data_size, axis=0),
-                 'A': np.repeat(np.expand_dims(A, axis=0), args.data_size, axis=0),
-                 'X': np.expand_dims(X, axis=-1),
-                 'G': np.repeat(np.expand_dims(G, axis=0), args.data_size, axis=0),
-                 'h': np.expand_dims(h, axis=-1)})
+                {'Q': Q,
+                 'p': p,
+                 'A': A,
+                 'X': X,
+                 'G': G,
+                 'h': h})
 
 elif args.prob_type == 'Convex_QCQP_RHS':
     """
@@ -304,6 +304,7 @@ elif args.prob_type == 'Nonconvex_QP':
                      'lb': np.array(lb)}
         file_path = os.path.join('datasets', 'qp', "{}.mat".format(args.mat_name))
         sio.savemat(file_path, rand_dict)
+
 
 
 
